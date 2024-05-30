@@ -1,0 +1,68 @@
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.bookmarker{
+    background-color: #F7ECDE;
+}
+
+.section-head h1{
+    font-family: "Pacifico", cursive;
+    font-size: 3.125rem;
+    position: relative;
+    z-index: 1;
+}
+
+.section-head h1::after{
+    content: "";
+    position: absolute;
+    width: 19%;
+    height: 30%;
+    left: 40.5%;
+    bottom: .1875rem;
+    background-color: #fec260;
+    transition: height 350ms;
+    z-index: -1;
+}
+
+
+.border{
+    border-width: 1px !important;
+    border-style: dotted !important;
+    border-color: #352e28 !important;
+    width: 90%;
+}
+
+.body-title {
+    font-family: "Righteous", sans-serif;
+    font-size: 1.5625rem;
+}
+
+.body-title i,p {
+    color: brown;
+}
+
+.alert-box{
+    background-color: rgba(0, 0, 0, 0.412);
+}
+
+.alert-box .child1{
+    background-color: #F15F5D;
+}
+
+.alert-box .child2{
+    background-color: #FEBE2E;
+}
+
+.alert-box .child3{
+    background-color: #4DB748;
+}
+
+.alert-box .box-caption i{
+   color: rgb(187, 65, 32);
+   position: absolute;
+   right: 103%;
+   bottom: 45%;
+}

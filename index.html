@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Book Mark </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="bookmarker p-5 vh-100">
+        <div class="section-head text-center mb-5">
+            <h1>Bookmarker</h1>
+        </div>
+        <div class="section-body">
+
+            <div class="border mt-4 mx-auto"></div>
+            <div>
+                <h2 class="body-title text-center mt-3 mb-5 d-flex justify-content-center">
+                    <i class="fa-solid fa-bookmark me-2"></i>
+                    <p>Bookmark your favorite sites</p>
+                    <i class="fa-solid fa-bookmark ms-2"></i>
+                </h2>
+            </div>
+
+            <div class="site-name">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="sitename" class="fw-bold"><i class="fa-solid fa-book-bookmark me-3 mb-3"></i>
+                                Site Name </label>
+                        </div>
+                        <div class="col-12">
+                            <input oninput="Validator(this)" type="text" id="sitename" placeholder="Bookmark Name"
+                                class="w-100 form-control mb-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-url">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="sitelink" class="fw-bold"><i class="fa-solid fa-link me-2 mb-3"></i> Site URL
+                            </label>
+                        </div>
+                        <div class="col-12">
+                            <input oninput="Validator(this)" type="url" id="sitelink" placeholder="Website URL"
+                                class="w-100 form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="submit-button mx-auto w-25 text-center">
+                <button class="btn btn-warning text-white px-5 mt-4" onclick="AddLink()">submit</button>
+            </div>
+
+            <div class="border mt-4 mx-auto"></div>
+
+            <div class="table">
+                <table class="table mt-4 text-center bg-light w-75 mx-auto">
+                    <thead>
+                        <tr>
+                            <th class="text-capitalize">Index</th>
+                            <th class="text-capitalize">Website Name</th>
+                            <th class="text-capitalize">Visit</th>
+                            <th class="text-capitalize">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listdata">
+
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="alertmessage" class="alert-box position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+        <div class="box-warning bg-white p-4 rounded-2">
+            <div class="circls d-flex mx-auto w-25">
+                <span class="child1 rounded-circle me-2 p-2 mx-auto"></span>
+                <span class="child2 rounded-circle me-2 p-2 mx-auto"></span>
+                <span class="child3 rounded-circle p-2 mx-auto"></span>
+            </div>
+
+            <div class="box-caption">
+                <p class=" mt-4 pb-3 fw-bold">Site Name or Url is not valid, Please follow the rules below :</p>
+                <ul>
+                    <li class="list-unstyled d-flex align-items-center position-relative">
+                        <i class="fa-regular fa-circle-right"></i>
+                        <p>Site name must contain at least 3 characters</p>
+                    </li>
+
+                    <li class="list-unstyled d-flex align-items-center position-relative">
+                        <i class="fa-regular fa-circle-right"></i>
+                        <p>Site URL must be a valid one</p>
+                    </li>
+                    </ol>
+            </div>
+
+            <div class="close-btn mx-auto w-25 text-center">
+                <button class="btn btn-danger px-3" onclick="hidealertbox()">Try Again</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
